@@ -1,0 +1,39 @@
+.lucid-button {
+    padding: 4px 15px 6px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: @font-stack;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    box-sizing: border-box;
+    //height: 28px;
+    white-space: nowrap;
+    transition:.15s ease-in-out background-color;
+    -webkit-font-smoothing: auto;
+    color: #fff;
+    svg path {
+        fill: #fff;
+    }
+
+    //loop through available colors
+    .for(@color-options); .-each(@name) {
+        &.@{name} {
+            background: @@name;
+            &:hover{
+                background: lighten(@@name, 5%);
+            }
+        }
+    }
+
+    &.clear {
+        background-color: transparent;
+    }
+    &.lucid-button-icon {
+        .lucid-icon-18 {
+            vertical-align: top;
+            margin-right: 3px;
+        }
+    }
+}

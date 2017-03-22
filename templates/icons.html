@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <h1>Icon Sheet</h1>
+    <div class="hr"></div>
+    <p>Click to download / copy the svg.
+        <br>All SVGs should have the artboard size in the name, color should be applied through css.</p>
+    <lucid-search ng-model="searchResults" width="200" class="icon-search" placeholder="Search"></lucid-search>
+    <!-- <button ng-click="class = ''">None</button>
+<button ng-click="class = 'fill-blue-steel'">Dark</button>
+<button ng-click="class = 'fill-white'">Light</button>
+<button ng-click="class = 'fill-active'">Active</button> -->
+    <div ng-repeat="icongroup in icongroups | filter: searchResults">
+        <h2>{{icongroup.icongroup}}</h2>
+        <div class="icon-list-container clearfix {{class}}">
+            <div class="particle-icon-wrapper" ng-repeat="icon in icongroup.icons | filter:{name : searchResults}">
+                <lucid-buttcon-popover class="popover-list {{class}}" showpopover="dropdown.show" icon="{{icon.url}}" width="105">
+                    <ul ng-click="dropdown.show = false;">
+                        <a href="{{icon.url}}" download="{{icon.name}}.svg">
+                            <li>Download</li>
+                        </a>
+                        <li clipboard text="icon.url">Copy URL</li>
+                    </ul>
+                </lucid-buttcon-popover>
+                <h5>{{icon.name}}</h5>
+            </div>
+        </div>
+    </div>
+</div>

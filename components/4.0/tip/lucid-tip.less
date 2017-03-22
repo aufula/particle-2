@@ -1,0 +1,149 @@
+.lucid-tip-wrapper {
+    position: absolute;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 36px 10px 15px;
+    border-radius: 4px;
+    line-height: 18px;
+    text-align: left;
+    z-index: 1;
+    &:after {
+        content: '';
+        position: absolute;
+        border: 9px solid transparent;
+    }
+    &.ng-hide {
+        opacity: 0;
+    }
+    &.caret-left {
+        &.ng-hide {
+            margin-left: 10px;
+        }
+        &:after {
+            border-left: none;
+            left: -10px;
+            top: 10px;
+        }
+    }
+    &.caret-right {
+        &.ng-hide {
+            margin-right: 10px;
+        }
+        &:after {
+            border-right: none;
+            right: -10px;
+            top: 10px;
+        }
+    }
+    &.caret-top {
+        &.ng-hide {
+            margin-top: 10px;
+        }
+        &:after {
+            border-top: none;
+            left: 50%;
+            margin-left: -9px;
+            top: -10px;
+        }
+    }
+    &.caret-bottom {
+        &.ng-hide {
+            margin-top: -10px;
+        }
+        &:after {
+            border-bottom: none;
+            left: 50%;
+            margin-left: -9px;
+            bottom: -10px;
+        }
+    }
+    /////////
+    //COLORS
+    ////////
+    &.lucidchart-orange {
+        background: @lucidchart-orange;
+        &.caret-left {
+            &:after {
+                border-right: 10px solid @lucidchart-orange;
+            }
+        }
+        &.caret-right {
+            &:after {
+                border-left: 10px solid @lucidchart-orange;
+            }
+        }
+        &.caret-top {
+            &:after {
+                border-bottom: 10px solid @lucidchart-orange;
+            }
+        }
+        &.caret-bottom {
+            &:after {
+                border-top: 10px solid @lucidchart-orange;
+            }
+        }
+    }
+    &.info-purple {
+        background: @info-purple;
+        &.caret-left {
+            &:after {
+                border-right: 10px solid @info-purple;
+            }
+        }
+        &.caret-right {
+            &:after {
+                border-left: 10px solid @info-purple;
+            }
+        }
+        &.caret-top {
+            &:after {
+                border-bottom: 10px solid @info-purple;
+            }
+        }
+        &.caret-bottom {
+            &:after {
+                border-top: 10px solid @info-purple;
+            }
+        }
+    }
+    &.info-green {
+        background: @info-green;
+        &.caret-left {
+            &:after {
+                border-right: 10px solid @info-green;
+            }
+        }
+        &.caret-right {
+            &:after {
+                border-left: 10px solid @info-green;
+            }
+        }
+        &.caret-top {
+            &:after {
+                border-bottom: 10px solid @info-green;
+            }
+        }
+        &.caret-bottom {
+            &:after {
+                border-top: 10px solid @info-green;
+            }
+        }
+    }
+    &.ng-animate {
+        transition: .5s ease-in-out all;
+    }
+    &.ng-hide.ng-hide-add-active {
+        margin: 0;
+        transition: .2s ease-out all;
+    }
+    .lucid-close-icon {
+        cursor: pointer;
+        z-index: 1;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        svg path {
+            fill: #fff;
+        }
+    }
+}
