@@ -1022,8 +1022,8 @@ input {
   position: absolute;
   width: 8px;
   height: 6px;
-  top: 8px;
-  right: 6px;
+  top: 2px;
+  right: 10px;
   cursor: pointer;
 }
 .lucid-select-wrapper .selected-option-wrapper .dropdown-arrow svg {
@@ -1220,8 +1220,8 @@ input {
 }
 .lucid-collapse-bar .collapse-bar-top .lucid-hide-content-icon {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -5px;
+  left: -5px;
   height: 30px;
   padding: 12px 4px 0 11px;
   -webkit-transition: all 0.25s ease-in-out;
