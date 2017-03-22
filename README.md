@@ -1,4 +1,4 @@
 # Lucid Particle Design
 
 This project can be viewed here:
-http://particle.golucid.co
+https://corysmc.github.io/particle-2

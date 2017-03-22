@@ -39,14 +39,14 @@ angular.module('appConfig', [])
         // Allow same origin resource loads.
         'self',
         // Allow loading from our assets domain.  Notice the difference between * and **.
-        'http://particle.golucid.co/components/**',
+        'https://corysmc.github.io/particle-2/components/**',
         'https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-157/**'
     ]);
 }])
 
 .constant("config", {
-    'componentsURL': "/components/4.0/" //local dev
-    //'componentsURL': "http://particle.golucid.co/components/4.0/" //github
+    //'componentsURL': "/components/4.0/" //local dev
+    'componentsURL': "https://corysmc.github.io/particle-2/components/4.0/" //github
 
 });
 
